@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chintan Ghadi | Portfolio</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #2f4f3a;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 24px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background: #2f4f3a;
+  color: #f4f1e8;
+}
+
+nav a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #f4f1e8;
+  font-size: 14px;
+}
+
+nav .btn {
+  background: #f4b400;
+  color: #000;
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+
+/* HERO */
+.hero-wrapper {
+  height: 100vh;
+  padding-top: 90px;
+}
+
+.hero-top {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+}
+
+/* HERO IMAGE */
+.hero-image img {
+  width: 500px;
+  height: 480px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* HERO TEXT */
+.hero-text {
+  max-width: 710px;
+}
+
+.hero-text h1 {
+  font-size: 96px;
+  line-height: 0.9;
+  letter-spacing: 4px;
+  color: #f4f1e8;
+}
+.hero-text .outline {
+  display: block;
+  font-size: 80px;
+  color: transparent;
+  -webkit-text-stroke: 1px #f4b400;
+  margin-top: 10px;
+}
+
+.hero-sub {
+  margin-top: 24px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #f4f1e8;
+}
+
+.hero-meta {
+  margin-top: 18px;
+  font-size: 18px;
+  color: #f4f1e8;
+}
+
+/* HERO BOTTOM */
+.hero-bottom {
+  height: 25vh;
+  background: #000;
+  position: relative;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 90px;
+  background: #f4b400;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+.section {
+  min-height: 100vh;
+  padding: 120px 80px;
+}
+
+.section.light {
+  background: #f6f2e8;
+  color: #2f2f2f;
+}
+
+.section.dark {
+  background: #2f4f3a;
+  color: #f4f1e8;
+}
+
+.section h2 {
+  font-size: 56px;
+  margin-bottom: 40px;
+}
+
+/* GRID + BOXES */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.box {
+  background: #243b2e;
+  padding: 40px 30px;
+  border-radius: 16px;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.box h3 {
+  font-size: 26px;
+  margin-bottom: 16px;
+  color: #f4f1e8;
+  transition: color 0.3s ease;
+}
+
+.box p,
+.box ul {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #f4f1e8;
+}
+
+.box ul {
+  padding-left: 20px;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  background: #2f4f3a;
+  border: 1px solid #f4b400;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.box:hover h3 {
+  color: #f4b400;
+}
+
+/* CONTACT */
+.contact p {
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+.name{
+    font-size:xx-large;
+}
+.contact-form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-family: Georgia, serif;
+}
+
+.contact-form button {
+  background: #f4b400;
+  color: #000;
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="name">Hey! I'm Chintan Ghadi</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#resume">Resume</a>
+    <a href="#qualifications">Qualifications</a>
+    <a href="#work">Work</a>
+    <a href="#contact" class="btn">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero-wrapper" id="home">
+  <div class="hero-top">
+
+    <div class="hero-image">
+      <img src="C:\Users\avani\OneDrive\Documents\PORTFOLIO !\images\profile.jpg.jpeg" alt="Chintan Ghadi">
+    </div>
+
+    <div class="hero-text">
+      <h1>
+        WEB DEVELOPER
+        <span class="outline">portfolio</span>
+      </h1>
+
+      <p class="hero-sub">
+        Passionate Computer Engineering student focused on building clean,
+        reliable software.
+      </p>
+
+      <p class="hero-meta">
+        BE: Computer Engineering<br>
+        Debugging • Problem Solving
+      </p>
+    </div>
+
+  </div>
+
+  <div class="hero-bottom">
+    <a href="#about" class="scroll-btn">Scroll</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section light">
+  <h2>About Me</h2>
+  <div class="grid">
+    <div class="box">
+      <h3>Who I Am</h3>
+      <p>A motivated Computer Engineering student with a strong interest in web development and problem solving.</p>
+    </div>
+    <div class="box">
+      <h3>My Approach</h3>
+      <p>I believe in writing clean, structured code and continuously improving through hands-on learning.</p>
+    </div>
+    <div class="box">
+      <h3>My Goals</h3>
+      <p>To grow as a software developer and contribute to impactful real-world projects.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume" class="section dark">
+  <h2>Resume</h2>
+  <div class="grid">
+    <div class="box">
+      <h3>Web Development</h3>
+      <p>Experience in building responsive websites using HTML, CSS, and JavaScript with a focus on usability.</p>
+    </div>
+    <div class="box">
+      <h3>Problem Solving</h3>
+      <p>Strong analytical mindset with the ability to break down complex problems into logical solutions.</p>
+    </div>
+    <div class="box">
+      <h3>Programming Languages</h3>
+      <ul>
+        <li>C</li>
+        <li>Java</li>
+        <li>Python</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- QUALIFICATIONS -->
+<section id="qualifications" class="section light">
+  <h2>Qualifications</h2>
+  <div class="grid">
+    <div class="box">
+      <h3>BitNBuild Hackathon</h3>
+      <p>Participated in the BitNBuild’25 Hackathon organized by GDSC at Fr. CRCE.</p>
+    </div>
+    <div class="box">
+      <h3>MathWorks Certification</h3>
+      <p>Successfully completed the Signal Processing Onramp course by MathWorks Training Services.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="section dark">
+  <h2>Work</h2>
+  <div class="grid">
+    <div class="box">
+      <h3>Academic Projects</h3>
+      <p>Worked on academic projects applying programming concepts and logical thinking.</p>
+    </div>
+    <div class="box">
+      <h3>Team Collaboration</h3>
+      <p>Experience working in teams during hackathons and coursework.</p>
+    </div>
+    <div class="box">
+      <h3>Learning Projects</h3>
+      <p>Built practice projects to strengthen web and programming fundamentals.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section light contact">
+  <h2>Contact Me</h2>
+
+  <form action="https://formspree.io/f/abcdwxyz" method="POST" class="contact-form">
+    
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+
+</body>
+</html>
